@@ -5,7 +5,7 @@ const { Dislike } = require("../models/Dislike");
 const { auth } = require("../middleware/auth");
 
 //=================================
-//             Like
+//         Like / Dislike
 //=================================
  
 // 좋아요 정보 가져오기
@@ -45,7 +45,7 @@ router.post('/getDislikes', (req, res) => {
 })
 
 // 좋아요 하기
-router.post('/uplike', (req, res) => {
+router.post('/upLike', (req, res) => {
 
     let variable = {}
 
@@ -69,7 +69,7 @@ router.post('/uplike', (req, res) => {
 })
 
 // 좋아요 취소하기
-router.post('/unlike', (req, res) => {
+router.post('/unLike', (req, res) => {
 
     let variable = {}
 

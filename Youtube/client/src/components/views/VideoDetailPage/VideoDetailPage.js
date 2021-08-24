@@ -63,7 +63,7 @@ function VideoDetailPage(props) {
                             구독정보를 보내줌, 비디오에 대한 좋아요를 보내줌 */}
                             <List.Item
                                 // 작성자의 아이디와 로그인한 사람의 아이디를 보내줌 - 이를 props를 통해 사용할 수 있음 (props.userTo, props.userFrom)
-                                actions={[ <LikeDislikes video videoId= {videoId} userId={localStorage.getItem('userId')} />, subscriberButton ]} 
+                                actions={[ <LikeDislikes video videoId={videoId} userId={localStorage.getItem('userId')} />, subscriberButton ]} 
                             >
                                 {/* 작성자 이름 등의 정보 (유저이미지, 제목, 설명) */}
                                 <List.Item.Meta

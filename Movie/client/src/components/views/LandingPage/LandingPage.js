@@ -69,10 +69,11 @@ function LandingPage() {
                     {Movies && Movies.map((movie, index) => (
                         <React.Fragment key={index}>
                             <GirdCards
-                            // 이미지가 없을 경우도 생각
-                            image={movie.poster_path ? `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
-                            movieId={movie.id}
-                            movieName={movie.original_title}
+                                landingPage
+                                // 이미지가 없을 경우도 생각
+                                image={movie.poster_path ? `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
+                                movieId={movie.id}
+                                movieName={movie.original_title}
                             />
                         </React.Fragment>
                     ))}

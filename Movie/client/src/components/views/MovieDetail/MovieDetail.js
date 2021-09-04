@@ -4,6 +4,7 @@ import MainImage from '../LandingPage/Sections/MainImage';
 import MovieInfo from './Sections/MovieInfo';
 import GirdCards from '../commons/GirdCards';
 import { Row } from 'antd';
+import Favorite from './Sections/Favorite';
 
 function MovieDetail(props) {
 
@@ -53,6 +54,10 @@ function MovieDetail(props) {
             {/* Body */}
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
+                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                    { /* 로그인 시, 로컬 스토리지에 넣어뒀던 사용자 아이디를 가져와서 사용 */ }
+                    <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')}/>
+                </div>
 
                 {/* Movie Info - movie state를 넣어서 보내주고, MoveInfo에서 props로 받아서 사용 */}
                 <MovieInfo movie={Movie} />
